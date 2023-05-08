@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+p a{
+    text-decoration: none;
+    color:darkblue;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+p a:hover{
+    color: red;
+    text-decoration: underline !important;
+}

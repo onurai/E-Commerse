@@ -1,0 +1,101 @@
+.wrapper{
+    position: relative;
+    background: transparent;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    transition: height .2s easy;
+    .form-box{
+        h2{
+            font-size: 2em;
+            color: rgb(15, 163, 62);
+            text-align: center;
+        }
+        .input-box{
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 30px 0px;
+            input{
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                border: none;
+                outline: none;
+                font-size: 1em;
+                color: #1b1b1b;
+                font-weight: 600;
+                padding: 0 35px 0 5px;
+            }
+            .icon{
+                position: absolute;
+                right: 8px;
+                font-size: 18px;
+                color: #1b1b1b;
+                line-height: 60px;
+            }
+        }
+        .remember-forgot{
+            font-size: .9em;
+            color: #1b1b1b;
+            font-weight: 500;
+            margin: -15px 0 15px 0;
+            display: flex;
+            justify-content: space-between;
+            label input{
+                accent-color: #1b1b1b;
+                margin-right: 3px;
+            }
+            a{
+                color: #1b1b1b;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                    color: red;
+                }
+            }
+        }
+        .botton{
+            width:100%;
+            height: 45px;
+            background: rgb(3, 108, 3);
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            color: #ffffff;
+        }
+        .login-register{
+            font-size: .9em;
+            color: #1b1b1b;
+            text-align: center;
+            font-weight: 500;
+            margin: 25px 0 10px;
+            .register-link{
+                color:#1b1b1b;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                    color: red;
+                }
+            }
+        }
+    }
+    .icon-close{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width:45px;
+        height: 45px;
+        background: rgb(19, 13, 188);
+        color:#ffffff;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom-left-radius: 20px;
+        cursor: pointer;
+        z-index: 1;
+    }
+}
