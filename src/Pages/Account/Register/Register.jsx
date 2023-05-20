@@ -6,7 +6,6 @@ import { IoIosMail } from 'react-icons/io';
 import { FaUserTie } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import { nanoid } from 'nanoid'
 
 const Register = () => {
   const [fullname, setFullname] = useState('');
@@ -21,8 +20,7 @@ const Register = () => {
         Fullname: fullname,
         Username: username,
         Email: email,
-        Password: password,
-        SecurityKey: nanoid().slice(1, 7)
+        Password: password
       }
       
       try{

@@ -17,6 +17,8 @@ import Products from './Pages/Dashboard/DashPages/Products';
 import Users from './Pages/Dashboard/DashPages/Users';
 import AddProduct from './Pages/Dashboard/DashPages/AddProduct';
 import { React } from 'react';
+import Detail from './Pages/Shop/Details/Detail';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -39,7 +41,9 @@ function App() {
           <Route path='/products' element={<Products />} />
           <Route path='/users' element={<Users />} />
           <Route path='/addProduct' element={<AddProduct />} />
+          <Route path='/details/:id' element={<Detail />} />
         </Routes>
+
       </BrowserRouter>
     </>
   );

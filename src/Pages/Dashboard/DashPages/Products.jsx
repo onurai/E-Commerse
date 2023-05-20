@@ -22,6 +22,11 @@ const Products = () => {
       getProducts();
   }, []) 
 
+  let user = JSON.parse(localStorage.getItem('user'))
+  console.log(user);
+  const token = user.token
+  console.log(token)
+
   const getProducts = async () => {
       await axios.get('https://localhost:7238/api/Product')
       .then(res => {
@@ -32,7 +37,9 @@ const Products = () => {
   };
   
   const DeleteHandler =(id) => {
-    axios.delete(`https://localhost:7238/api/Product/${id}`)
+    axios.delete(`https://localhost:7238/api/Product/${id}`, {
+       headers: {'Authorization':`Bearer ${token}`}
+    })
     .then(res => {
         console.log(res.data);
         setProducts(products.filter(pro => pro.id !== id))
@@ -46,13 +53,11 @@ const Products = () => {
     setShow(true);
   }
 
-  const proCode = productCode ? productCode : nanoid().slice(1, 10)
-
   const UpdateHandler = async() =>{
       const newProduct = {
         title:title,
         description: description,
-        productCode: proCode,
+        productCode: productCode,
         brand: brand,
         price: price,
         discountPercentage: discountPercentage,
@@ -94,10 +99,8 @@ const Products = () => {
                 return(
                   <tr key={index}>
                     <td>{pro.id}</td>
-                    <td>
-                      {
+                    <td>              
                         <img key={index} src={pro.images[0]} alt="" style={{width: '70px', height: '70px', margin: '5px'}}/>
-                      }
                     </td>
                     <td>{pro.title}</td>
                     <td>{pro.description}</td>

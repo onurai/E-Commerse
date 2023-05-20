@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  .image{
+    width: 400px;
+    height: 400px;
+  }
+
+  .left-btn{
+    position: absolute;
+    top: 50%;
+    left:0;
+    padding-left: 30px;
+    transform: translateX(0);
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: black;
+  }
+
+  .right-btn{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding-right: 30px;
+    transform: translateX(0);
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: black;
+  }
+
+  .dots{
+    cursor:pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+

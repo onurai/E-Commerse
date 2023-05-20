@@ -1,0 +1,23 @@
+.card{
+    border: none !important;
+    outline: none;
+}
+ 
+.card .card-body{
+    text-align: left;
+    
+}
+.card a img{
+    object-fit: contain;
+}
+.card .card-body h5{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.card .card-body span{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: sans-serif;
+}

@@ -25,6 +25,7 @@ const Users = () => {
     const getUsers = async () => {
         const response = await axios.get('https://localhost:7238/api/User')
         setUsers(response.data);
+        console.log(response.data);
     }
    
     const firstFiltered = users.filter(user => user.fullname.toLowerCase().includes(value.toLowerCase())) 
